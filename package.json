@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/nicolasrafaelduma/ToDoList/issues"
   },
-  "homepage": "https://github.com/nicolasrafaelduma/ToDoList#readme"
+  "homepage": "https://github.com/nicolasrafaelduma/ToDoList#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.2"
+  }
 }
