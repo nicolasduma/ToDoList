@@ -1,6 +1,19 @@
+const { findByIdAndDelete } = require("../models/Task")
 const Task = require("../models/Task")
 
 module.exports = {
+
+    getTasks: async (req, res) => {
+        try {
+
+            res.send(await Task.find({}))
+
+        } catch (error) {
+
+            res.status(400).send(error)
+
+        }
+    },
 
     addTask: async (req, res) => {
         const task = new Task({
@@ -10,6 +23,6 @@ module.exports = {
         })
 
         res.send(await task.save())
-    }
-
+    },
+    
 }
