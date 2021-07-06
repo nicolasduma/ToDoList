@@ -1,4 +1,3 @@
-const { findByIdAndDelete } = require("../models/Task")
 const Task = require("../models/Task")
 
 module.exports = {
@@ -6,7 +5,8 @@ module.exports = {
     getTasks: async (req, res) => {
         try {
 
-            res.send(await Task.find({}))
+            let tasks = await Task.find({})
+            res.render("main", { tasks })
 
         } catch (error) {
 
