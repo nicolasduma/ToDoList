@@ -1,0 +1,10 @@
+/* FORM - NEW TASK */
+#form-new-task {
+    padding: 20px 30px;
+    border-radius: 40px;
+}
+
+#description-new-task {
+    font-size: 16px;
+    font-weight: 500;
+}

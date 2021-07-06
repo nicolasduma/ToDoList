@@ -1,0 +1,13 @@
+/* From lightest to darkest */
+.bg-light-primary {
+    background-color: #FDFDFDFF;
+}
+
+.bg-light-secondary {
+    background-color: #E9EAECFF;
+}
+
+.bg-light-tertiary {
+    background-color: #E4E5E9FF;
+}
+

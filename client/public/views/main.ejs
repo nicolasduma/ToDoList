@@ -6,18 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do list - Your tasks</title>
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/generic-classes.css">
+    <link rel="stylesheet" href="../assets/css/thames-classes.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 
-<body>
+<body class="bg-light-tertiary">
 
-    <h1>Your tasks</h1>
+    <div id="conteiner">
 
-    <% for (let task of tasks) { %>
+        <header>
+            <form method="POST" action="/task/add" id="form-new-task" class="bg-light-primary">
+                <input name="description" type="text" placeholder="Write a new task" id="description-new-task">
 
-        <%=task%>
-        <br>
+                <div id="actions-form" class="d-none">
+                    <select name="category" id="">
+                        <option value="true" selected>Personal</option>
+                        <option value="false">Work</option>
+                    </select>
 
-    <% } %>
+                    <button type="submit">Save</button>
+                </div>
+            </form>
+        </header>
+
+
+
+
+
+
+
+        
+    </div>
 
 </body>
 
