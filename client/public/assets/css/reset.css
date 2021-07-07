@@ -16,3 +16,7 @@ body {
 #conteiner {
     padding: 0 12%;
 }
+
+button {
+    cursor: pointer;
+}

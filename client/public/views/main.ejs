@@ -10,32 +10,32 @@
     <link rel="stylesheet" href="../assets/css/generic-classes.css">
     <link rel="stylesheet" href="../assets/css/thames-classes.css">
     <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 
-<body class="bg-light-tertiary">
+<body class="bg-tertiary light">
 
     <div id="conteiner">
 
-        <header>
-            <form method="POST" action="/task/add" id="form-new-task" class="bg-light-primary">
+        <header class="d-flex justify-content-center">
+            <form method="POST" action="/task/add" id="form-new-task" class="d-flex align-items-center bg-primary light">
                 <input name="description" type="text" placeholder="Write a new task" id="description-new-task">
 
-                <div id="actions-form" class="d-none">
-                    <select name="category" id="">
+                <div id="actions-form" class="d-none align-items-center">
+                    <select name="category" class="bg-secondary light">
                         <option value="true" selected>Personal</option>
                         <option value="false">Work</option>
                     </select>
 
-                    <button type="submit">Save</button>
+                    <button type="submit" class="bg-secondary light"><i class="uil uil-plus"></i></button>
                 </div>
             </form>
+
+            <div id="continer-change-thame">
+                <label for="change-thame" class="d-flex justify-content-center align-items-center bg-primary light" id="label-change-thame"><i class="uil uil-moon"></i></label>
+                <input type="checkbox" id="change-thame" class="d-none">
+            </div>
         </header>
-
-
-
-
-
-
 
         
     </div>

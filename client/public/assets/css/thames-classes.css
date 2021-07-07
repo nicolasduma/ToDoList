@@ -1,13 +1,25 @@
+.light * {
+    color: #3B3B3BFF;
+}
+
+.dark * {
+    color: #3B3B3BFF;
+}
+
 /* From lightest to darkest */
-.bg-light-primary {
+.bg-primary.light {
     background-color: #FDFDFDFF;
 }
 
-.bg-light-secondary {
+.bg-secondary.light {
     background-color: #E9EAECFF;
 }
 
-.bg-light-tertiary {
+.bg-tertiary.light {
     background-color: #E4E5E9FF;
 }
 
+/* From darkest to lightest */
+.ft-color-primary.light {
+    color: #3B3B3BFF;
+}
