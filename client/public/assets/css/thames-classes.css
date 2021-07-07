@@ -1,25 +1,36 @@
+.light, .dark {
+    transition: 0.5s;
+    transition-property: background-color;
+}
+
 .light * {
-    color: #3B3B3BFF;
+    color: #3B3B3B;
 }
 
 .dark * {
-    color: #3B3B3BFF;
+    color: #FFFFFF;
 }
 
 /* From lightest to darkest */
 .bg-primary.light {
-    background-color: #FDFDFDFF;
+    background-color: #FDFDFD;
 }
 
 .bg-secondary.light {
-    background-color: #E9EAECFF;
-}
-
-.bg-tertiary.light {
-    background-color: #E4E5E9FF;
+    background-color: #E9EAEC;
 }
 
 /* From darkest to lightest */
 .ft-color-primary.light {
-    color: #3B3B3BFF;
+    color: #3B3B3B;
 }
+
+/* From darkest to lightest */
+.bg-primary.dark {
+    background-color: #000000;
+}
+
+.bg-secondary.dark {
+    background-color: #1C1D21;
+}
+
