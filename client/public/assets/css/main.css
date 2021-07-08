@@ -34,7 +34,6 @@ header {
 
 #actions-form select {
     padding: 0 40px 0 15px;
-    background-image: url("../images/arrow.png") !important;
     background-repeat: no-repeat;
     background-size: 10px;
     background-position: 88% 52%;
@@ -49,7 +48,7 @@ header {
 
 #actions-form button {
     width: 35px;
-    font-size: 18px;
+    font-size: 22px;
 }
 
 /* CHANGE THAME */
