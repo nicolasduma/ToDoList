@@ -5,7 +5,7 @@ header {
 
 /* FORM - NEW TASK */
 #form-new-task {
-    width: 60rem;
+    width: 35rem;
     height: 60px;
     padding: 0 30px;
     border-radius: 40px;
@@ -59,4 +59,22 @@ header {
     border-radius: 50px;
     font-size: 30px;
     cursor: pointer;
+}
+
+/* TESk */
+.continer-tesk {
+    padding: 20px 3%;
+    border-radius: 12px;
+    gap: 2%;
+}
+
+.description-tesk {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.btn-delete {
+    font-weight: 500;
+    font-size: 22px;
 }

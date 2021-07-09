@@ -15,7 +15,7 @@
 
 <body class="bg-secondary light">
 
-    <div id="conteiner">
+    <div id="conteiner" class="d-flex flex-direction-column">
 
         <header class="d-flex justify-content-center">
             <form method="POST" action="/task/add" id="form-new-task" class="d-flex align-items-center bg-primary light">
@@ -33,6 +33,21 @@
 
             <button class="d-flex justify-content-center align-items-center bg-primary light" id="change-thame"><i class="uil uil-moon ft-color-secondary light"></i>
         </header>
+
+        <div id="conteiner-all-tesks">
+
+            <ul>
+                <li class="continer-tesk d-flex align-items-center bg-primary ft-color-secondary light">
+                    <input type="checkbox">
+                    <input type="text" value="dkfakld" name="id" class="d-none">
+                    <div class="description-tesk">
+                        Tesk desc
+                    </div>
+                    <button class="btn-delete"><i class="uil uil-trash ft-color-secondary light"></i></button>
+                </li>
+            </ul>
+
+        </div>
   
     </div>
 

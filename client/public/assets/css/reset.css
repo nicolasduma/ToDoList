@@ -15,8 +15,14 @@ body {
 
 #conteiner {
     padding: 0 12%;
+    gap: 50px;
+}
+
+ul, ol, li {
+    list-style: none;
 }
 
 button {
     cursor: pointer;
+    background: transparent;
 }
