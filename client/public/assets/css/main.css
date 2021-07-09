@@ -25,6 +25,7 @@ header {
 
 #actions-form {
     gap: 10px;
+    transition: opacity 0.4s;
 }
 
 #actions-form > select, #actions-form > button {
