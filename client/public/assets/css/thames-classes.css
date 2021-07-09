@@ -1,4 +1,4 @@
-.light, .dark {
+.transition.light, .transition.dark {
     transition: 2s;
     transition-property: color, "background-color";
 }

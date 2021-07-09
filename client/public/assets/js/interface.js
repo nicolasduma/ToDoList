@@ -1,19 +1,21 @@
-let usedThame = localStorage.getItem("thame") ? localStorage.getItem("thame") == "true" : true
-setThame(usedThame)
+document.addEventListener("DOMContentLoaded", () => {
+    let usedThame = localStorage.getItem("thame") ? localStorage.getItem("thame") == "true" : true
+    setThame(usedThame)
 
     document.querySelector("#change-thame").addEventListener("click", () => {
         usedThame = !usedThame
-        setThame(usedThame)
+        setThame(usedThame, "transition")
         localStorage.setItem("thame", usedThame.toString())
     })
 
     document.querySelector("#description-new-task").addEventListener("keyup", keyOfNewDescInput)
 })
 
-function setThame(usedThame) {
+function setThame(usedThame, addClass) {
     let thames = usedThame ? ["light", "dark"] : ["dark", "light"]
 
     document.querySelectorAll("." + thames[1]).forEach(element => {
+        element.classList.add(addClass)
         element.classList.remove(thames[1])
         element.classList.add(thames[0])
     })
