@@ -15,7 +15,7 @@ function setThame(usedThame, addClass) {
     let thames = usedThame ? ["light", "dark"] : ["dark", "light"]
 
     document.querySelectorAll("." + thames[1]).forEach(element => {
-        element.classList.add(addClass)
+        if (addClass) element.classList.add(addClass)
         element.classList.remove(thames[1])
         element.classList.add(thames[0])
     })
