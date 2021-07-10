@@ -36,18 +36,21 @@
 
         <div id="conteiner-all-tasks">
 
-            <ul>
-                <li class="continer-task d-flex align-items-center bg-primary ft-color-secondary light">
-                    <div class="conteiner-task-completed d-flex justify-content-center align-items-center">
-                        <input type="checkbox" id="123" class="task-completed d-none category-personal light">
-                        <label for="123" class="lav" class="d-none"></label>
-                    </div>
-                    <input type="text" value="dkfakld" name="id" class="d-none">
-                    <div class="description-task">
-                        Task desc
-                    </div>
-                    <button class="btn-delete"><i class="uil uil-trash ft-color-secondary light"></i></button>
-                </li>
+            <ul class="d-flex flex-direction-column">
+                <% for (let task of tasks) {%>
+
+                    <li class="continer-task d-flex align-items-center bg-primary ft-color-secondary light">
+                        <div class="conteiner-task-completed d-flex justify-content-center align-items-center">
+                            <input type="checkbox" id="<%=task._id%>" class="task-completed d-none category-<%=task.category%> light">
+                            <label for="<%=task._id%>" class="d-none"></label>
+                        </div>
+                        <p class="description-task">
+                            <%=task.description%>
+                        </p>
+                        <button onclick="deleteTask('<%=task._id%>')" class="btn-delete"><i class="uil uil-trash ft-color-secondary light"></i></button>
+                    </li>
+
+                <%}%>
             </ul>
 
         </div>
