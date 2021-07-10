@@ -61,14 +61,47 @@ header {
     cursor: pointer;
 }
 
-/* TESk */
-.continer-tesk {
+/* TASK */
+.continer-task {
     padding: 20px 3%;
     border-radius: 12px;
     gap: 2%;
 }
 
-.description-tesk {
+.task-completed + label::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 4px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.task-completed.category-personal + label::before {
+    border-color: #02BD70FF;
+}
+
+.task-completed.category-work + label::before {
+    border-color: #7F47FFFF;
+}
+
+.task-completed:checked + label::before {
+    transition: 0.7s;
+    transition-property: "backgroud";
+}
+
+.task-completed.category-personal:checked + label::before {
+    background-color: #02BD70FF;
+}
+
+.task-completed.category-work:checked + label::before {
+    background-color: #7F47FFFF;
+}
+
+.description-task {
     width: 100%;
     font-size: 16px;
     font-weight: 400;
