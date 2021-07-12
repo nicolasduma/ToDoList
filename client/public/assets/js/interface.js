@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     document.querySelector("#description-new-task").addEventListener("keyup", keyOfNewDescInput)
+
+    document.querySelectorAll(".task-completed").forEach(element => {
+        if (element.dataset.done == "true") element.setAttribute("checked", "checked")
+    })
 })
 
 function setThame(usedThame, addClass) {
