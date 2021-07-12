@@ -18,10 +18,10 @@ module.exports = {
     addTask: async (req, res) => {
         try {
 
-        const task = new Task({
-            description: req.body.description,
-            category: req.body.category,
-        })
+            const task = new Task({
+                description: req.body.description,
+                category: req.body.category,
+            })
 
             await task.save()
 
@@ -33,6 +33,25 @@ module.exports = {
 
         }
     },
+
+    updateTask: async (req, res, next) => {
+        try {
+
+            const id = req.params.id
+
+            let task = await Task.findById(id)
+
+            task.done = req.params.done == "true" ? true : false
+
+            res.send(await Task.findByIdAndUpdate(id, task))
+
+        } catch (error) {
+
+            res.send(error)
+
+        }
+    },
+
     deleteTask: async (req, res) => {
         try {
 
@@ -48,5 +67,5 @@ module.exports = {
 
         }
     },
-    
+
 }
