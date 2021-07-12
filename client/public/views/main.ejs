@@ -41,7 +41,7 @@
 
                     <li id="<%=task._id%>" class="continer-task d-flex align-items-center bg-primary ft-color-secondary light">
                         <div class="conteiner-task-completed d-flex justify-content-center align-items-center">
-                            <input type="checkbox" data-done="<%=task.done%>" onchange="changeDoneInput('<%=task._id%>')" id="checkbox<%=task._id%>" class="task-completed d-none category-<%=task.category%> light">
+                            <input type="checkbox" data-done="<%=task.done%>" onchange="changeDoneInput(this, '<%=task._id%>')" id="checkbox<%=task._id%>" class="task-completed d-none category-<%=task.category%> light">
                             <label for="checkbox<%=task._id%>"></label>
                         </div>
                         <p class="description-task">
@@ -58,6 +58,7 @@
     </div>
 
     <script src="../assets/js/interface.js"></script>
+    <script src="../assets/js/taskFunctions.js"></script>
 
 </body>
 
