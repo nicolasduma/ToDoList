@@ -16,12 +16,22 @@ module.exports = {
     },
 
     addTask: async (req, res) => {
+        try {
+
         const task = new Task({
-            title: req.body.title ? req.body.title : null,
             description: req.body.description,
             category: req.body.category,
         })
 
+            await task.save()
+
+            res.redirect("../task/all")
+
+        } catch (error) {
+
+            res.status(400).send(error)
+
+        }
     },
     deleteTask: async (req, res) => {
         try {
