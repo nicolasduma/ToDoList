@@ -22,7 +22,21 @@ module.exports = {
             category: req.body.category,
         })
 
-        res.send(await task.save())
+    },
+    deleteTask: async (req, res) => {
+        try {
+
+            const id = req.params.id
+
+            await Task.findByIdAndDelete(id)
+
+            res.send(id)
+
+        } catch (error) {
+
+            res.send(error)
+
+        }
     },
     
 }
