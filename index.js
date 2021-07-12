@@ -9,6 +9,7 @@ const taskRoutes = require("./src/routes/taskRoutes")
 
 mongoose.connect(process.env.DB_CONNECTED, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => { console.log(">>> DB connected <<<") }
 ).catch(error => { console.log(error) })
+mongoose.set('useFindAndModify', false)
 
 app.use(express.static(path.join(__dirname, "client/public")))
 
