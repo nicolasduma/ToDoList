@@ -39,10 +39,10 @@
             <ul class="d-flex flex-direction-column">
                 <% for (let task of tasks) {%>
 
-                    <li class="continer-task d-flex align-items-center bg-primary ft-color-secondary light">
+                    <li id="<%=task._id%>" class="continer-task d-flex align-items-center bg-primary ft-color-secondary light">
                         <div class="conteiner-task-completed d-flex justify-content-center align-items-center">
-                            <input type="checkbox" id="<%=task._id%>" class="task-completed d-none category-<%=task.category%> light">
-                            <label for="<%=task._id%>" class="d-none"></label>
+                            <input type="checkbox" data-done="<%=task.done%>" onchange="changeDoneInput('<%=task._id%>')" id="checkbox<%=task._id%>" class="task-completed d-none category-<%=task.category%> light">
+                            <label for="checkbox<%=task._id%>"></label>
                         </div>
                         <p class="description-task">
                             <%=task.description%>
