@@ -1,5 +1,6 @@
 .transition.light, .transition.dark {
-    transition: 1.5s;
+    transition: 1s;
+    transition-timing-function: ease-out;
     transition-property: color, "background";
 }
 

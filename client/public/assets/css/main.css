@@ -25,7 +25,9 @@ header {
 
 #actions-form {
     gap: 10px;
-    transition: opacity 0.4s;
+    transition: 0.4s;
+    transition-timing-function: ease-out;
+    transition-property: "opacity", "visibility";
 }
 
 #actions-form > select, #actions-form > button {
@@ -94,6 +96,7 @@ header {
 
 .task-completed:checked + label {
     transition: 0.7s;
+    transition-timing-function: ease-out;
     transition-property: "backgroud";
 }
 
