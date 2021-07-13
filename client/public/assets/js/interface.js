@@ -18,6 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
 function setThame(usedThame, addClass) {
     let thames = usedThame ? ["light", "dark"] : ["dark", "light"]
 
+    const buttonContent = document.querySelector("#change-thame").children[0]
+
+    buttonContent.classList.remove(usedThame ? "uil-sun" : "uil-moon")
+    buttonContent.classList.add(usedThame ? "uil-moon" : "uil-sun")
+
     document.querySelectorAll("." + thames[1]).forEach(element => {
         if (addClass) element.classList.add(addClass)
         element.classList.remove(thames[1])
