@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, "client/public")))
 app.set("views", path.join(__dirname, "client/public/views"))
 app.set("view engine", "ejs")
 
-app.use("/task", express.urlencoded({ extended: true }), taskRoutes)
+app.use("/task", express.urlencoded({ extended: true }), express.json(), taskRoutes)
 
 app.listen(process.env.PORT, () => {
     console.log(`>>> Server running on port ${process.env.PORT} <<<`)
