@@ -6,6 +6,7 @@ module.exports = {
         try {
 
             let tasks = await Task.find({})
+            tasks = tasks.reverse()
             res.render("main", { tasks })
 
         } catch (error) {
@@ -24,12 +25,11 @@ module.exports = {
             })
 
             await task.save()
-
-            res.redirect("../task/all")
+            res.send(task)
 
         } catch (error) {
 
-            res.status(400).send(error)
+            res.status(400).send({ error, body: req.body })
 
         }
     },
@@ -58,7 +58,6 @@ module.exports = {
             const id = req.params.id
 
             await Task.findByIdAndDelete(id)
-
             res.send(id)
 
         } catch (error) {
