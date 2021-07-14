@@ -18,11 +18,11 @@
     <div id="conteiner" class="d-flex flex-direction-column">
 
         <header class="d-flex justify-content-center">
-            <form method="POST" action="/task/add" id="form-new-task" class="d-flex align-items-center bg-primary light">
-                <input name="description" type="text" placeholder="Write a new task" autocomplete="off" id="description-new-task">
+            <form onsubmit="addNewTask()" id="form-new-task" class="d-flex align-items-center bg-primary light">
+                <input name="description" type="text" placeholder="Write a new task" spellcheck="false" autocomplete="off" id="description-new-task">
 
                 <div id="actions-form" class="d-flex align-items-center opacity-0">
-                    <select name="category" class="bg-arrow bg-secondary ft-color-secondary light">
+                    <select name="category" id="category-new-task" class="bg-arrow bg-secondary ft-color-secondary light">
                         <option value="true" selected>Personal</option>
                         <option value="false">Work</option>
                     </select>
@@ -36,7 +36,7 @@
 
         <div id="conteiner-all-tasks">
 
-            <ul class="d-flex flex-direction-column">
+            <ul id="content-all-tasks" class="d-flex flex-direction-column">
                 <% for (let task of tasks) {%>
 
                     <li id="<%=task._id%>" class="continer-task d-flex align-items-center bg-primary ft-color-secondary light">
