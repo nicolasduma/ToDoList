@@ -57,10 +57,7 @@ function sendRequest(body) {
             console.log(res.body)
 
             document.querySelector("#description-new-task").value = res.body.description
-            for (let element of document.querySelector("#category-new-task").children) {
-                if (element.value == res.body.category) element.setAttribute("selected", "selected")
-                else element.removeAttribute("selected")
-            }
+            document.querySelector("#category-new-task").indexSelected = res.body.category == "true" ? 0 : 1
         }
     }
 }

@@ -55,6 +55,15 @@ function updateScreenWidthNewTask(task) {
         <button onclick="deleteTask('${task._id}')" aria-label="Delete" class="btn-delete hover-tooltip ${thame}"><i class="uil uil-trash ft-color-secondary ${thame}"></i></button>
     </li>
     `
+    const contentAllTasks = document.getElementById("content-all-tasks")
 
-    document.getElementById("content-all-tasks").innerHTML = newTaskElement + document.getElementById("content-all-tasks").innerHTML
+    contentAllTasks.innerHTML = newTaskElement + contentAllTasks.innerHTML
+
+    document.querySelector("#description-new-task").value = ""
+
+    const actionsForm = document.querySelector("#actions-form")
+    actionsForm.classList.remove("opacity-100")
+    actionsForm.classList.add("opacity-0")
+
+    document.querySelector("#category-new-task").selectedIndex = 0
 }
