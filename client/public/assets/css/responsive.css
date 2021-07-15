@@ -1,0 +1,142 @@
+@media (max-width: 1000px) {
+    #conteiner {
+        padding: 0 10%;
+    }
+
+    #form-new-task {
+        height: 55px;
+        padding: 0 20px;
+        border-radius: 35px;
+        gap: 7px;
+    }
+
+    #description-new-task {
+        font-size: 14px;
+    }
+
+    #actions-form {
+        gap: 7px;
+    }
+
+    #actions-form > select, #actions-form > button {
+        height: 32px;
+        border-radius: 50px;
+    }
+
+    #actions-form select, #actions-form select option {
+        font-size: 14px;
+    }
+
+    #actions-form button {
+        width: 32px;
+        font-size: 20px;
+    }
+
+    #change-thame {
+        width: 55px;
+        height: 55px;
+        font-size: 27px;
+    }
+
+    .description-task {
+        font-size: 14px;
+    }
+    
+    .btn-delete {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    #conteiner {
+        padding: 0 7%;
+    }
+
+    #form-new-task {
+        flex-grow: 1;
+    }
+
+    .continer-task {
+        padding: 15px 3%;
+    }
+}
+
+
+@media (max-width: 550px) {
+    #conteiner {
+        padding: 0 5%;
+    }
+
+    .hover-tooltip::after {
+        display: none;
+    }    
+
+    header {
+        gap: 6px;
+    }
+
+    #form-new-task {
+        height: 50px;
+        padding: 0 15px;
+        gap: 5px;
+    }
+
+    #actions-form {
+        gap: 5px;
+    }
+    
+    #actions-form > select, #actions-form > button {
+        height: 30px;
+        border-radius: 50px;
+    }
+    
+    #actions-form select {
+        padding: 0 25px 0 12px;
+        background-size: 7px;
+    }
+    
+    #actions-form select, #actions-form select option {
+        font-size: 13px;
+        font-weight: 500;
+    }
+    
+    #actions-form button {
+        width: 30px;
+        font-size: 18px;
+    }
+
+    #change-thame {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+    }
+
+    .continer-task {
+        padding: 10px 3%;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        padding-top: 10px;
+    }
+
+    #conteiner {
+        padding: 0 1.5%;
+        gap: 30px;
+    }
+
+    header {
+        flex-wrap: wrap-reverse;
+        gap: 10px;
+    }
+
+    #form-new-task {
+        flex-basis: 100%;
+    }
+
+    .description-task {
+        font-size: 13px;
+        font-weight: 400;
+    }
+}
