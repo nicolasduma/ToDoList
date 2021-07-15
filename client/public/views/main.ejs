@@ -10,16 +10,17 @@
     <link rel="stylesheet" href="../assets/css/generic-classes.css">
     <link rel="stylesheet" href="../assets/css/thames-classes.css">
     <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 
-<body class="bg-secondary light">
+<body class="bg-secondary d-flex justify-content-center align-items-center light">
 
     <div id="conteiner" class="d-flex flex-direction-column">
 
-        <header class="d-flex justify-content-center">
+        <header class="d-flex justify-content-center align-items-center">
             <form onsubmit="addNewTask()" id="form-new-task" class="d-flex align-items-center bg-primary light">
-                <input name="description" type="text" placeholder="Write a new task" spellcheck="false" autocomplete="off" id="description-new-task">
+                <input name="description" type="text" placeholder="Write a new task" spellcheck="false" autocomplete="off" id="description-new-task" minlength="1" maxlength="30">
 
                 <div id="actions-form" class="d-flex align-items-center opacity-0">
                     <select name="category" id="category-new-task" class="bg-arrow bg-secondary ft-color-secondary light">
