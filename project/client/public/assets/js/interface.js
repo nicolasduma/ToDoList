@@ -1,12 +1,12 @@
-let usedThame = localStorage.getItem("thame") ? localStorage.getItem("thame") == "true" : true
+let usedTheme = localStorage.getItem("theme") ? localStorage.getItem("theme") == "true" : true
 
 document.addEventListener("DOMContentLoaded", () => {
-    setThame(usedThame)
+    setTheme(usedTheme)
 
-    document.querySelector("#change-thame").addEventListener("click", () => {
-        usedThame = !usedThame
-        setThame(usedThame, "transition")
-        localStorage.setItem("thame", usedThame.toString())
+    document.querySelector("#change-theme").addEventListener("click", () => {
+        usedTheme = !usedTheme
+        setTheme(usedTheme, "transition")
+        localStorage.setItem("theme", usedTheme.toString())
     })
 
     document.querySelector("#description-new-task").addEventListener("keyup", keyOfNewDescInput)
@@ -16,18 +16,18 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 })
 
-function setThame(usedThame, addClass) {
-    let thames = usedThame ? ["light", "dark"] : ["dark", "light"]
+function setTheme(usedTheme, addClass) {
+    let themes = usedTheme ? ["light", "dark"] : ["dark", "light"]
 
-    const buttonContent = document.querySelector("#change-thame").children[0]
+    const buttonContent = document.querySelector("#change-theme").children[0]
 
-    buttonContent.classList.remove(usedThame ? "uil-sun" : "uil-moon")
-    buttonContent.classList.add(usedThame ? "uil-moon" : "uil-sun")
+    buttonContent.classList.remove(usedTheme ? "uil-sun" : "uil-moon")
+    buttonContent.classList.add(usedTheme ? "uil-moon" : "uil-sun")
 
-    document.querySelectorAll("." + thames[1]).forEach(element => {
+    document.querySelectorAll("." + themes[1]).forEach(element => {
         if (addClass) element.classList.add(addClass)
-        element.classList.remove(thames[1])
-        element.classList.add(thames[0])
+        element.classList.remove(themes[1])
+        element.classList.add(themes[0])
     })
 }
 
@@ -41,18 +41,18 @@ function keyOfNewDescInput(event) {
 }
 
 function updateScreenWidthNewTask(task) {
-    let thame = usedThame ? "light" : "dark"
+    let theme = usedTheme ? "light" : "dark"
     let newTaskElement = `
-    <li id="${task._id}" class="continer-task d-flex align-items-center bg-primary ft-color-secondary ${thame}">
+    <li id="${task._id}" class="continer-task d-flex align-items-center bg-primary ft-color-secondary ${theme}">
         <div class="conteiner-task-completed d-flex justify-content-center align-items-center">
-            <input type="checkbox" data-done="${task.done}" onchange="changeDoneInput(this, '${task._id})" id="checkbox${task._id}" class="task-completed d-none category-${task.category} ${thame}">
+            <input type="checkbox" data-done="${task.done}" onchange="changeDoneInput(this, '${task._id})" id="checkbox${task._id}" class="task-completed d-none category-${task.category} ${theme}">
             <label for="checkbox${task._id}"></label>
         </div>
 
         <p class="description-task">
             ${task.description}
         </p>
-        <button onclick="deleteTask('${task._id}')" aria-label="Delete" class="btn-delete hover-tooltip ${thame}"><i class="uil uil-trash ft-color-secondary ${thame}"></i></button>
+        <button onclick="deleteTask('${task._id}')" aria-label="Delete" class="btn-delete hover-tooltip ${theme}"><i class="uil uil-trash ft-color-secondary ${theme}"></i></button>
     </li>
     `
     const contentAllTasks = document.getElementById("content-all-tasks")
