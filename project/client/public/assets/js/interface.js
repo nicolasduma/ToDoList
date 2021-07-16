@@ -45,7 +45,7 @@ function updateScreenWidthNewTask(task) {
     let newTaskElement = `
     <li id="${task._id}" class="continer-task d-flex align-items-center bg-primary ft-color-secondary ${theme}">
         <div class="conteiner-task-completed d-flex justify-content-center align-items-center">
-            <input type="checkbox" data-done="${task.done}" onchange="changeDoneInput(this, '${task._id})" id="checkbox${task._id}" class="task-completed d-none category-${task.category} ${theme}">
+            <input type="checkbox" data-done="${task.done}" onchange="changeDoneInput(this, '${task._id}')" id="checkbox${task._id}" class="task-completed d-none category-${task.category} ${theme}">
             <label for="checkbox${task._id}"></label>
         </div>
 
@@ -58,6 +58,10 @@ function updateScreenWidthNewTask(task) {
     const contentAllTasks = document.getElementById("content-all-tasks")
 
     contentAllTasks.innerHTML = newTaskElement + contentAllTasks.innerHTML
+
+    document.querySelectorAll(".task-completed").forEach(element => {
+        if (element.dataset.done == "true") element.setAttribute("checked", "checked")
+    })
 
     document.querySelector("#description-new-task").value = ""
 
